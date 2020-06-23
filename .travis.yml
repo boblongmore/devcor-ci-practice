@@ -1,4 +1,15 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+
+#basic travis ci testing
+
+#specify language and version
+language: python
+python:
+  - "3.8"
+
+#install dependencies
+install:
+  - pip install -r requirements.txt
+
+#run tests
+script:
+  - pytest
